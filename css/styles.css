@@ -1,0 +1,416 @@
+/* Common Variables */
+:root {
+    --italian-green: #009246;
+    --italian-white: #ffffff;
+    --italian-red: #ce2b37;
+    --header-height: 60px;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+
+/* Italian Stripe */
+.italian-stripe {
+    width: 100%;
+    height: 10px;
+    display: flex;
+}
+
+.stripe-green {
+    background-color: var(--italian-green);
+    width: 33.33%;
+}
+
+.stripe-white {
+    background-color: var(--italian-white);
+    width: 33.33%;
+}
+
+.stripe-red {
+    background-color: var(--italian-red);
+    width: 33.33%;
+}
+/* Navigation */
+nav {
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--italian-white);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--italian-red);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--italian-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Home Page Styles */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5');
+    background-size: cover;
+    background-position: center;
+    color: var(--italian-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--italian-white);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--italian-green);
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+.specials {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.specials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--italian-red);
+}
+
+.special-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.special-item {
+    background-color: var(--italian-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--italian-green);
+    transition: transform 0.3s ease;
+}
+
+.special-item:hover {
+    transform: translateY(-5px);
+}
+
+.special-item h3 {
+    color: var(--italian-red);
+    margin-bottom: 10px;
+}
+
+.special-item .price {
+    color: var(--italian-green);
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: var(--italian-red);
+    color: var(--italian-white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #b52530;
+}
+
+.decorator {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--italian-green), var(--italian-white), var(--italian-red));
+    margin: 20px auto;
+}
+
+.italian-accent {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--italian-green);
+    color: var(--italian-white);
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Menu Page Styles */
+.menu-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b');
+    background-size: cover;
+    background-position: center;
+    color: var(--italian-white);
+    margin-bottom: 40px;
+}
+
+.menu-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.category-header {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+.category-header h2 {
+    color: var(--italian-green);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.menu-item {
+    background: var(--italian-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 20px;
+}
+
+.item-name {
+    color: var(--italian-red);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.item-description {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.item-price {
+    color: var(--italian-green);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Reservation Page Styles */
+.reservation-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0');
+    background-size: cover;
+    background-position: center;
+    color: var(--italian-white);
+}
+
+.reservation-container {
+    max-width: 1200px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.reservation-form {
+    background: var(--italian-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.submit-btn {
+    background-color: var(--italian-green);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.reservation-info {
+    background: var(--italian-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h3 {
+    color: var(--italian-red);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.opening-hours {
+    list-style: none;
+}
+
+.opening-hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #666;
+}

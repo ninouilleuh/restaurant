@@ -1,0 +1,244 @@
+.nav-toggle {
+    display: none; /* Hide button on desktop */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reservation-container,
+    .menu-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-header h1,
+    .reservation-header h1 {
+        font-size: 2.5em;
+    }
+    /* Mobile Navigation */
+    .nav-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--italian-white);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+    /* Navigation Menu */
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.95);
+        transition: left 0.3s ease;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: var(--header-height);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.4em;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .nav-toggle.scrolled {
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .nav-toggle::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    /* Menu Grid */
+    .menu-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .menu-item {
+        margin-bottom: 20px;
+    }
+
+    /* Reservation Form */
+    .reservation-container {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form {
+        padding: 20px;
+    }
+
+    /* Special Items */
+    .special-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Sections Padding */
+    .about,
+    .specials {
+        padding: 40px 15px;
+    }
+
+    /* Headers */
+    .menu-header,
+    .reservation-header {
+        padding: 40px 15px;
+    }
+
+    .menu-header h1,
+    .reservation-header h1 {
+        font-size: 2em;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Font Size Adjustments */
+    body {
+        font-size: 16px;
+    }
+
+    /* Form Elements */
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+
+    /* Spacing Adjustments */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* Image Optimizations */
+    .item-image {
+        height: 180px;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-grid,
+    .special-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reservation-container {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .menu-item:hover,
+    .special-item:hover {
+        transform: none;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    .btn:active {
+        background-color: var(--italian-red);
+        transform: scale(0.98);
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .about h2,
+    .specials h2 {
+        font-size: 2em;
+    }
+
+    .special-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-container,
+    .menu-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-header h1,
+    .reservation-header h1 {
+        font-size: 2.5em;
+    }
+}
