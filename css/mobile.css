@@ -180,7 +180,25 @@
         padding: 15px;
         font-size: 0.9em;
     }
+
+    .menu-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filter-section, .sort-section {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .dish-details {
+        grid-template-columns: 1fr;
+    }
 }
+
 
 /* Tablet Adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
