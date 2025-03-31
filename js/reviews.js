@@ -1,4 +1,3 @@
-// reviews.js
 
 // Sample reviews data
 const reviews = [
