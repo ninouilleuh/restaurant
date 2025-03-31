@@ -197,7 +197,22 @@
     .dish-details {
         grid-template-columns: 1fr;
     }
+
+    .overall-rating {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-tags {
+        justify-content: center;
+    }
 }
+
 
 
 /* Tablet Adjustments */

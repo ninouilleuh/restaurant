@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>La Cucina Bella - Authentic Italian Restaurant</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
     <script src="js/script.js"></script>
+    <script src="js/reviews.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -42,6 +49,161 @@
         <p>Founded in 1985, La Cucina Bella brings the authentic flavors of Italy to your table. Our recipes have been passed down through generations, and we take pride in using only the finest, freshest ingredients to create memorable dining experiences.</p>
         <div class="italian-accent">Authentic Italian Cuisine</div>
     </section>
+
+
+    <div class="reviews-header">
+
+        <h1>Customer Reviews</h1>
+
+        <div class="decorator"></div>
+
+        <p>What Our Guests Say About Us</p>
+
+    </div>
+
+
+    <div class="reviews-container">
+
+        <!-- Overall Rating Section -->
+
+        <div class="overall-rating">
+
+            <div class="rating-summary">
+
+                <h2>4.8</h2>
+
+                <div class="stars">
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+
+                <p>Based on 245 reviews</p>
+
+            </div>
+
+            <button class="btn write-review-btn" id="writeReviewBtn">Write a Review</button>
+
+        </div>
+
+
+        <!-- Review Filters -->
+
+        <div class="review-filters">
+
+            <select id="sortReviews">
+
+                <option value="newest">Newest First</option>
+
+                <option value="highest">Highest Rated</option>
+
+                <option value="lowest">Lowest Rated</option>
+
+                <option value="most-helpful">Most Helpful</option>
+
+            </select>
+
+            <div class="filter-tags">
+
+                <button class="filter-tag active" data-stars="all">All</button>
+
+                <button class="filter-tag" data-stars="5">5 Stars</button>
+
+                <button class="filter-tag" data-stars="4">4 Stars</button>
+
+                <button class="filter-tag" data-stars="3">3 Stars</button>
+
+                <button class="filter-tag" data-stars="2">2 Stars</button>
+
+                <button class="filter-tag" data-stars="1">1 Star</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Reviews Grid -->
+
+        <div class="reviews-grid" id="reviewsGrid">
+
+            <!-- Reviews will be dynamically loaded here -->
+
+        </div>
+
+
+        <!-- Load More Button -->
+
+        <button class="btn load-more-btn" id="loadMoreReviews">Load More Reviews</button>
+
+    </div>
+
+
+    <!-- Review Form Modal -->
+    <div class="modal" id="reviewModal">
+
+        <div class="modal-content">
+    
+            <span class="close-modal">&times;</span>
+    
+            <h2>Write a Review</h2>
+    
+            <form id="reviewForm">
+    
+                <div class="form-group">
+    
+                    <label>Your Rating (required)</label>
+    
+                    <div class="star-rating-input">
+    
+                        <i class="far fa-star" data-rating="1"></i>
+    
+                        <i class="far fa-star" data-rating="2"></i>
+    
+                        <i class="far fa-star" data-rating="3"></i>
+    
+                        <i class="far fa-star" data-rating="4"></i>
+    
+                        <i class="far fa-star" data-rating="5"></i>
+    
+                    </div>
+    
+                    <input type="hidden" id="ratingInput" required>
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="reviewTitle">Title</label>
+    
+                    <input type="text" id="reviewTitle" required>
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="reviewText">Your Review</label>
+    
+                    <textarea id="reviewText" rows="5" required></textarea>
+    
+                </div>
+    
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+    
+            </form>
+    
+        </div>
+    
+    </div>
+
+
 
     <section class="specials">
         <h2>Today's Specials</h2>
