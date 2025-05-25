@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About | La Cucina Bella</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -10,14 +19,73 @@
         <span></span>
         <span></span>
     </button>
+    <div class="italian-stripe">
+        <div class="stripe-green"></div>
+        <div class="stripe-white"></div>
+        <div class="stripe-red"></div>
+    </div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="reservations.html">Reservations</a></li>
         </ul>
     </nav>
+
+    <section class="hero" id="about-hero">
+        <h1>About La Cucina Bella</h1>
+        <div class="decorator"></div>
+        <p>Discover our story, our passion, and the people behind your favorite Italian dishes.</p>
+    </section>
+
+    <section class="about" id="about">
+        <p style="max-width: 700px; margin: 0 auto; color: var(--gray-dark);">
+            Since 1985, La Cucina Bella has been a beloved destination for authentic Italian cuisine in the heart of the city. Our family-owned restaurant is dedicated to bringing the rich flavors and traditions of Italy to your table, using recipes passed down through generations.
+        </p>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_1280.jpg" alt="La Cucina Bella Interior">
+            </div>
+            <div class="about-text">
+                <h2>Our Philosophy</h2>
+                <p>
+                    At La Cucina Bella, we believe that great food starts with the finest ingredients. We source fresh, local produce and import specialty items directly from Italy to ensure every dish is bursting with authentic flavor.
+                </p>
+                <h2>Meet the Chef</h2>
+                <p>
+                    Chef Giovanni Rossi leads our kitchen with passion and creativity. Trained in Milan and inspired by his grandmother's recipes, Chef Giovanni crafts each dish with care, from classic pastas to innovative seasonal specials.
+                </p>
+                <h2>Our Ambiance</h2>
+                <p>
+                    Enjoy a warm, inviting atmosphere perfect for family gatherings, romantic dinners, or celebrations with friends. Our décor reflects the charm of Italy, with rustic touches and modern elegance.
+                </p>
+                <a href="reservations.html" class="btn">Make a Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Guests Say</h2>
+        <div class="decorator"></div>
+        <blockquote>
+            "The best Italian food outside of Italy! The atmosphere is cozy and the staff treats you like family." <br>
+            <span>- Maria L.</span>
+        </blockquote>
+        <blockquote>
+            "Every dish is a masterpiece. Highly recommend the Osso Buco and homemade tiramisu!" <br>
+            <span>- James P.</span>
+        </blockquote>
+    </section>
+
+    <div class="italian-stripe">
+        <div class="stripe-green"></div>
+        <div class="stripe-white"></div>
+        <div class="stripe-red"></div>
+    </div>
+    <footer>
+        <p>© 2025 La Cucina Bella | Address: 123 Pasta Street, Foodville | Phone: (555) 123-4567</p>
+    </footer>
 </body>
 </html>

@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact | La Cucina Bella</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -10,14 +19,87 @@
         <span></span>
         <span></span>
     </button>
+    <div class="italian-stripe">
+        <div class="stripe-green"></div>
+        <div class="stripe-white"></div>
+        <div class="stripe-red"></div>
+    </div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
             <li><a href="reservations.html">Reservations</a></li>
         </ul>
     </nav>
+
+    <section class="contact-header">
+        <div class="contact-hero-img">
+            <div class="contact-hero-overlay">
+                <h1>Contact Us</h1>
+                <div class="decorator"></div>
+                <p>We'd love to hear from you! Reach out with questions, feedback, or to plan your next visit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="contact-info">
+            <h2>Our Location</h2>
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                123 Pasta Street, Foodville, FV 12345
+            </p>
+            <h2>Call or Email</h2>
+            <p>
+                <i class="fas fa-phone"></i> (555) 123-4567<br>
+                <i class="fas fa-envelope"></i> info@lacucinabella.com
+            </p>
+            <h2>Hours</h2>
+            <ul>
+                <li>Mon-Thu: 5:00 PM – 10:00 PM</li>
+                <li>Fri-Sat: 5:00 PM – 11:00 PM</li>
+                <li>Sun: 5:00 PM – 9:00 PM</li>
+            </ul>
+        </div>
+        <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+                <h2>Send Us a Message</h2>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div class="form-success" id="formSuccess" style="display:none;">
+                    <i class="fas fa-check-circle"></i> Thank you for contacting us! We'll get back to you soon.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="italian-stripe">
+        <div class="stripe-green"></div>
+        <div class="stripe-white"></div>
+        <div class="stripe-red"></div>
+    </div>
+    <footer>
+        <p>© 2025 La Cucina Bella | Address: 123 Pasta Street, Foodville | Phone: (555) 123-4567</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formSuccess').style.display = 'block';
+            this.reset();
+        });
+    </script>
 </body>
 </html>
